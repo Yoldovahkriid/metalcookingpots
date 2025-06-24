@@ -1,4 +1,5 @@
 ﻿using MetalPots.Blocks;
+using MetalPots.src.Block;
 using MetalPots.System.Cooking;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
@@ -17,6 +18,7 @@ namespace MetalPots
             api.RegisterBlockClass(Mod.Info.ModID + ".MPBlockCookingContainer", typeof(MPBlockCookingContainers));
             api.RegisterBlockClass(Mod.Info.ModID + ".MPBlockCookedContainer", typeof(MPBlockCookedContainer));
             api.RegisterBlockClass(Mod.Info.ModID + ".MPXSkillBlockCookingContainer", typeof(MPXSkillBlockCookingContainer));
+            api.RegisterBlockClass(Mod.Info.ModID + ".MPBlockCrock", typeof(MPBlockCrock));
         }
     }
 }

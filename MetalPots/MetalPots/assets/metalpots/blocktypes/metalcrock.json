@@ -1,0 +1,162 @@
+{
+    "code": "metalcrock",
+    "behaviorsByType": {
+        "*": [
+            {
+                "name": "GroundStorable",
+                "properties": {
+                    "layout": "Quadrants",
+                    "placeRemoveSound": "game:sounds/player/build",
+                    "collisionBox": {
+                        "x1": 0,
+                        "y1": 0,
+                        "z1": 0,
+                        "x2": 1,
+                        "y2": 0.3125,
+                        "z2": 1
+                    }
+                }
+            },
+            { "name": "Unplaceable" },
+            { "name": "RightClickPickup" }
+        ]
+    },
+    "heldTpIdleAnimation": "holdbothhands",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "classByType": {
+        "metalcrock-*": "metalpots.MPBlockCrock"
+    },
+    "entityClassByType": {
+        "metalcrock-*": "Crock"
+    },
+    "variantgroups": [
+        {
+            "code": "metal",
+            "states": [ "copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "chromium", "electrum", "titanium", "molybdochalkos", "meteoriciron", "steel", "cupronickel", "nickel", "platinum", "stainlesssteel", "uranium", "zinc" ]
+        },
+        {
+            "code": "side",
+            "loadFromProperties": "abstract/horizontalorientation"
+        }
+    ],
+    "attributesByType": {
+        "metalcrock-*": {
+            "shelvable": true,
+            "mealContainer": true,
+            "mealBlockCode": "metalpots:metalcrock-{metal}-{side}",
+            "servingCapacity": 8,
+            "bowlContents": null,
+            "handleLiquidContainerInteract": true,
+            "handleCookingContainerInteract": true,
+            "emptiedBlockCode": "metalpots:metalcrock-{metal}-{side}"
+        }
+    },
+    "shapeByType": {
+        "*-north": {
+            "base": "metalpots:block/clay/crock/base",
+            "rotateY": 0
+        },
+        "*-east": {
+            "base": "metalpots:block/clay/crock/base",
+            "rotateY": 270
+        },
+        "*-west": {
+            "base": "metalpots:block/clay/crock/base",
+            "rotateY": 90
+        },
+        "*-south": {
+            "base": "metalpots:block/clay/crock/base",
+            "rotateY": 180
+        }
+    },
+    "doNotRenderAtLod2": true,
+    "blockmaterial": "Metal",
+    "creativeinventory": {
+        "general": [ "metalcrock-{metal}-east" ],
+        "decorative": [ "metalcrock-{metal}-east" ]
+    },
+    "replaceable": 400,
+    "resistance": 1.5,
+    "maxStackSizeByType": {
+        "*": 1
+    },
+    "lightAbsorption": 0,
+    "texturesByType": {
+        "*": {
+            "ceramic": {
+                "base": "metalpots:block/metal/crock/{metal}"
+            },
+            "label": { "base": "game:block/clay/crock/label" }
+        }
+    },
+    "sounds": {
+        "walk": "game:walk/stone"
+    },
+    "sideopaque": { "all": false },
+    "sidesolid": { "all": false },
+    "emitsideao": { "all": false },
+    "collisionbox": {
+        "x1": 0.25,
+        "y1": 0,
+        "z1": 0.25,
+        "x2": 0.75,
+        "y2": 0.3125,
+        "z2": 0.75
+    },
+    "selectionbox": {
+        "x1": 0.25,
+        "y1": 0,
+        "z1": 0.25,
+        "x2": 0.75,
+        "y2": 0.3125,
+        "z2": 0.75
+    },
+    "guiTransform": {
+        "rotation": {
+            "x": -22.6,
+            "y": -125,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0.18,
+            "z": 0.5
+        },
+        "scale": 2.5
+    },
+    "groundTransform": { "scale": 3 },
+    "tpHandTransform": {
+        "translation": {
+            "x": -0.56,
+            "y": -0.1,
+            "z": -0.8
+        },
+        "rotation": {
+            "x": -139,
+            "y": -21,
+            "z": -118
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0.01,
+            "z": 0.5
+        },
+        "scale": 0.65
+    },
+    "groundStorageTransform": {
+            "origin": {
+                "x": 0.5,
+                "y": 0,
+                "z": 0.5
+            },
+            "scale": 0.75
+        },
+    "onshelfTransform": {
+            "origin": {
+                "x": 0.5,
+                "y": 0,
+                "z": 0.5
+            },
+            "scale": 0.75
+        }
+}

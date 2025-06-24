@@ -1,0 +1,28 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+		"ceramic": "C:/Users/lbees/Documents/VSAssets/textures/crock/copper"
+	},
+	"elements": [
+		{
+			"name": "Crock",
+			"from": [ 5.5, 0.0, 5.5 ],
+			"to": [ 10.5, 7.0, 10.5 ],
+			"rotationOrigin": [ 5.5, 0.0, 5.5 ],
+			"faces": {
+				"north": { "texture": "#ceramic", "uv": [ 2.0, 5.0, 7.0, 12.0 ] },
+				"east": { "texture": "#ceramic", "uv": [ 3.0, 7.0, 8.0, 14.0 ] },
+				"south": { "texture": "#ceramic", "uv": [ 0.0, 5.0, 5.0, 12.0 ] },
+				"west": { "texture": "#ceramic", "uv": [ 0.5, 0.0, 5.5, 7.0 ] },
+				"up": { "texture": "#ceramic", "uv": [ 9.5, 9.5, 14.5, 14.5 ] },
+				"down": { "texture": "#ceramic", "uv": [ 9.5, 9.5, 14.5, 14.5 ] }
+			}
+		}
+	]}

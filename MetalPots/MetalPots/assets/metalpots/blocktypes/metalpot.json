@@ -78,7 +78,7 @@
     "entityclassByType": {
         "*-cooked": "CookedContainer"
     },
-    "shape": { "base": "metalpots:block/metalpot-opened-empty" },
+    "shape": { "base": "metalpots:block/metal/metalpot-opened-empty" },
     "doNotRenderAtLod2": true,
     "blockmaterial": "Metal",
     "creativeinventory": {

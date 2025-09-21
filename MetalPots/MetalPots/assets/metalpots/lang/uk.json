@@ -1,0 +1,37 @@
+{
+    "game:tabname-metalcookware": "Metal Cookware",
+
+    "item-metalpottop-*": "Металева кришка каструлі",
+    "item-metalpotbottom-*": "Металева каструля без кришки",
+    "item-steelwool": "Металева губка",
+
+    "block-crockmold-raw-*": "Сира форма для бляшанки",
+    "block-crockmold-burned-*": "Форма для бляшанки",
+
+    "metalpottemplate": "Каструля {0}",
+    "dirtymetalpottemplate": "Покрита осадом каструля {0}",
+    "cookedmetalpottemplate": "Каструля приготованої їжі",
+    "metalcrocktemplate": "Бляшанка {0}",
+
+    "metal-copper": "з міді",
+    "metal-brass": "з латуні",
+    "metal-tinbronze": "з олов'яної бронзи",
+    "metal-bismuthbronze": "з бісмутової бронзи",
+    "metal-blackbronze": "із чорної бронзи",
+    "metal-silver": "зі срібла",
+    "metal-gold": "із золота",
+    "metal-iron": "із заліза",
+    "metal-chromium": "з хрому",
+    "metal-electrum": "з електруму",
+    "metal-titanium": "з титану",
+    "metal-molybdochalkos": "з молібдохалькосу",
+    "metal-meteoriciron": "з метеоритного заліза",
+    "metal-steel": "зі сталі",
+    "metal-cupronickel": "з мельхіору",
+    "metal-nickel": "з нікелю",
+    "metal-platinum": "з платини",
+    "metal-stainlesssteel": "з нержавіючої сталі",
+    "metal-uranium": "з урану",
+    "metal-zinc": "із цинку",
+    "blockdesc-dirtymetalpot-*-empty": "Покрито брудом, у такому стані не підходить для приготування їжі"
+}

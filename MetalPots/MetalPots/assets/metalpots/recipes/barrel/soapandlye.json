@@ -1,0 +1,117 @@
+[
+    {
+        "enabled": false,
+        "code": "cleanpot",
+        "sealHours": 12,
+        "ingredients": [
+            {
+                "type": "item",
+                "code": "soapandlye:soapportion-lye",
+                "litres": 10,
+                "consumeLitres": 10
+            },
+            {
+                "type": "block",
+                "code": "metalpots:dirtymetalpot-*-empty",
+                "name": "metal"
+            }
+        ],
+        "output": {
+            "type": "block",
+            "code": "metalpots:metalpot-{metal}-empty",
+            "quantity": 1
+        }
+    },
+    {
+        "enabled": false,
+        "code": "cleanpotchamomile",
+        "sealHours": 12,
+        "ingredients": [
+            {
+                "type": "item",
+                "code": "soapandlye:soapportion-chamomile",
+                "litres": 5,
+                "consumeLitres": 5
+            },
+            {
+                "type": "block",
+                "code": "metalpots:dirtymetalpot-*-empty",
+                "name": "metal"
+            }
+        ],
+        "output": {
+            "type": "block",
+            "code": "metalpots:metalpot-{metal}-empty",
+            "quantity": 1
+        }
+    },
+    {
+        "enabled": false,
+        "code": "cleanpothoney",
+        "sealHours": 12,
+        "ingredients": [
+            {
+                "type": "item",
+                "code": "soapandlye:soapportion-honey",
+                "litres": 5,
+                "consumeLitres": 5
+            },
+            {
+                "type": "block",
+                "code": "metalpots:dirtymetalpot-*-empty",
+                "name": "metal"
+            }
+        ],
+        "output": {
+            "type": "block",
+            "code": "metalpots:metalpot-{metal}-empty",
+            "quantity": 1
+        }
+    },
+    {
+        "enabled": false,
+        "code": "cleanpothibiscus",
+        "sealHours": 12,
+        "ingredients": [
+            {
+                "type": "item",
+                "code": "soapandlye:soapportion-hibiscus",
+                "litres": 5,
+                "consumeLitres": 5
+            },
+            {
+                "type": "block",
+                "code": "metalpots:dirtymetalpot-*-empty",
+                "name": "metal"
+            }
+        ],
+        "output": {
+            "type": "block",
+            "code": "metalpots:metalpot-{metal}-empty",
+            "quantity": 1
+        }
+    },
+    {
+        "enabled": false,
+        "code": "cleanpotlavender",
+        "sealHours": 12,
+        "ingredients": [
+            {
+                "type": "item",
+                "code": "soapandlye:soapportion-lavender",
+                "litres": 5,
+                "consumeLitres": 5
+            },
+            {
+                "type": "block",
+                "code": "metalpots:dirtymetalpot-*-empty",
+                "name": "metal"
+            }
+        ],
+        "output": {
+            "type": "block",
+            "code": "metalpots:metalpot-{metal}-empty",
+            "quantity": 1
+        }
+    }
+]

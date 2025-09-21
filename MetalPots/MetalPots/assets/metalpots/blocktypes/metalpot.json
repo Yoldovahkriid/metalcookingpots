@@ -1,5 +1,12 @@
 {
     "code": "metalpot",
+    "classByType": {
+        "metalpot-*-empty": "MPBlockCookingContainer",
+        "metalpot-*-cooked": "MPBlockCookedContainer"
+    },
+    "entityclassByType": {
+        "*-cooked": "CookedContainer"
+    },
     "behaviors": [
         {
             "name": "GroundStorable",
@@ -20,51 +27,8 @@
             "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility"
         }
     ],
-    "classByType": {
-        "metalpot-*-empty": "metalpots.MPBlockCookingContainer",
-        "metalpot-*-cooked": "metalpots.MPBlockCookedContainer"
-    },
-
     "heldTpIdleAnimation": "holdbothhandslarge",
     "heldTpUseAnimation": "twohandplaceblock",
-
-    "attributes": {
-        "tempGlowMode": 1
-    },
-    "attributesByType": {
-        "metalpot-*-empty": {
-            "cookingContainerSlots": 4,
-            "maxContainerSlotStackSize": 24,
-            "cookingSlotCapacityLitres": 24,
-            "servingCapacity": 24,
-            "maxServingSize": 24,
-            "storageType": 1,
-            "maxTemperature": 250,
-            "inFirePitProps": {
-                "transform": {
-                    "translation": {
-                        "x": 0,
-                        "y": 0.125,
-                        "z": 0
-                    }
-                },
-                "useFirepitModel": "Wide"
-            },
-            "mealContainer": true,
-            "mealBlockCode": "metalpots:metalpot-{metal}-cooked",
-            "dirtiedBlockCode": "metalpots:dirtymetalpot-{metal}-cooked"
-        },
-
-        "metalpot-*-cooked": {
-            "mealContainer": true,
-            "mealBlockCode": "metalpots:metalpot-{metal}-cooked",
-            "emptiedBlockCode": "metalpots:metalpot-{metal}-empty",
-            "servingCapacity": 24,
-            "allowHeating": true,
-            "maxTemperature": 250,
-            "handleCookingContainerInteract": true
-        }
-    },
     "variantgroups": [
         {
             "code": "metal",
@@ -75,15 +39,98 @@
             "states": [ "empty", "cooked" ]
         }
     ],
-    "entityclassByType": {
-        "*-cooked": "CookedContainer"
-    },
     "shape": { "base": "metalpots:block/metal/metalpot-opened-empty" },
+    "textures": {
+        "transparent": { "base": "game:block/transparent" },
+        "ceramic": { "base": "game:block/clay/pot/{color}" },
+        "metal":  {"base": "game:block/metal/ingot/{metal}"},
+        "group1": { "base": "game:block/food/meal/group1-flax-carrot-blueberry-cottagecheese-fish" },
+        "group2": { "base": "game:block/food/meal/group2-soup-flyagaric-cactifruit-redmeat" },
+        "group3": { "base": "game:block/food/meal/group3-millet-bolete-cranberry-poultry" },
+        "group4": { "base": "game:block/food/meal/group4-rice-parsnip-whitecurrant-bluecheese-fishstew" },
+        "group5": { "base": "game:block/food/meal/group5-rye-turnip-blackcurrant-cheddarcheese-poultrystew" },
+        "group6": { "base": "game:block/food/meal/group6-spelt-onion-redcurrant-egg-redmeatstew" },
+        "group7": { "base": "game:block/food/meal/group7-honey-fieldmushroom-pineapple-scrambledegg-bushmeat" },
+        "group8": { "base": "game:block/food/meal/group8-amaranth-pumpkin-bellpepper-bushmeatstew" },
+        "group9": { "base": "game:block/food/meal/group9-sunflower-soya" },
+        "group10": { "base": "game:block/food/meal/group10-cabbage" },
+        "group11": { "base": "game:block/food/meal/group11-cassava" },
+        "group12": { "base": "game:block/food/meal/group12-peanut" },
+        "group13": { "base": "game:block/food/meal/group13-aubergine" },
+        "group14": { "base": "game:block/food/meal/group14-tomato" },
+        "group15": { "base": "game:block/food/meal/group15-walnut" },
+        "group17": { "base": "game:block/food/meal/group17-olive" },
+        "honey": { "base": "game:block/liquid/honey" },
+        "fruit-redapple": { "base": "game:block/food/pie/fill-apple" },
+        "fruit-pinkapple": { "base": "game:block/food/pie/fill-apple" },
+        "fruit-yellowapple": { "base": "game:block/food/pie/fill-apple" },
+        "fruit-cherry": { "base": "game:block/food/pie/fill-cherry" },
+        "fruit-peach": { "base": "game:block/food/pie/fill-peach" },
+        "fruit-pear": { "base": "game:block/food/pie/fill-pear" },
+        "fruit-orange": { "base": "game:block/food/pie/fill-orange" },
+        "fruit-mango": { "base": "game:block/food/pie/fill-mango" },
+        "fruit-pomegranate": { "base": "game:block/food/pie/fill-pomegranate" },
+        "fruit-lychee": { "base": "game:block/food/pie/fill-lychee" },
+        "fruit-breadfruit": { "base": "game:block/food/pie/fill-breadfruit" },
+
+        "rot-solids": { "base": "game:item/resource/rot/rot-solids" },
+        "rot-spill": { "base": "game:item/resource/rot/rot-spill" },
+
+        "milkportion": { "base": "game:block/food/dairy/milk" },
+        "cottagecheeseportion": { "base": "game:block/food/dairy/cottagecheese" },
+        "glue-hot": { "base": "game:block/liquid/glue-hot" },
+        "glue-cold": { "base": "game:block/liquid/glue-cold" }
+    },
+  "attributes": {
+    "tempGlowMode": 1,
+    "mealContainer": true,
+    "servingCapacity": 24,
+    "maxServingSize":  24,
+    "storageType": 1,
+    "maxTemperature": 200,
+    "mealBlockCode": "metalpots:metalpot-{metal}-cooked",
+    "wearableAttachment": true,
+    "attachableToEntity": {
+      "texturePrefixCode": "metalpots:metalpot-{metal}-{type}",
+      "categoryCode": "utilities",
+      "attachedShapeBySlotCode": {
+        "frontrightside": { "base": "metalpots:item/wearable/hooved/metalcookpotr-elk" },
+        "frontleftside": { "base": "metalpots:item/wearable/hooved/metalcookpotl-elk" }
+      }
+    },
+    "inFirePitProps": {
+      "transform": {
+        "translation": {
+          "x": 0,
+          "y": 0.125,
+          "z": 0
+        }
+      },
+      "useFirepitModel": "Wide"
+    }
+  },
+    "attributesByType": {
+        "metalpot-*-empty": {
+            "cookingContainerSlots": 4,
+            "maxContainerSlotStackSize": 24,
+            "cookingSlotCapacityLitres": 24,
+            "dirtiedBlockCode": "metalpots:dirtymetalpot-{metal}-cooked"
+        },
+
+        "metalpot-*-cooked": {
+            "mealContainer": true,
+            "emptiedBlockCode": "metalpots:metalpot-{metal}-empty",
+            "allowHeating": true,
+            "handleCookingContainerInteract": true
+        }
+    },
+
     "doNotRenderAtLod2": true,
     "blockmaterial": "Metal",
     "creativeinventory": {
         "general": [ "metalpot-*-empty" ],
-        "decorative": [ "metalpot-*-empty" ]
+        "decorative": [ "metalpot-*-empty" ],
+        "metalcookware": [ "metalpot-*-empty" ]
     },
     "replaceable": 400,
     "resistance": 1.5,
@@ -92,52 +139,6 @@
         "*": 4
     },
     "lightAbsorption": 0,
-    "texturesByType": {
-        "*": {
-            "transparent": { "base": "game:block/transparent" },
-            "ceramic": { "base": "game:block/metal/ingot/{metal}" },
-            "lid": { "base": "game:block/metal/ingot/{metal}" },
-            "metal": { "base": "game:block/metal/ingot/{metal}" },
-            "group1": { "base": "game:block/food/meal/group1-flax-carrot-blueberry-cottagecheese-fish" },
-            "group2": { "base": "game:block/food/meal/group2-soup-flyagaric-cactifruit-redmeat" },
-            "group3": { "base": "game:block/food/meal/group3-millet-bolete-cranberry-poultry" },
-            "group4": { "base": "game:block/food/meal/group4-rice-parsnip-whitecurrant-bluecheese-fishstew" },
-            "group5": { "base": "game:block/food/meal/group5-rye-turnip-blackcurrant-cheddarcheese-poultrystew" },
-            "group6": { "base": "game:block/food/meal/group6-spelt-onion-redcurrant-egg-redmeatstew" },
-            "group7": { "base": "game:block/food/meal/group7-honey-fieldmushroom-pineapple-scrambledegg-bushmeat" },
-            "group8": { "base": "game:block/food/meal/group8-amaranth-pumpkin-bellpepper-bushmeatstew" },
-            "group9": { "base": "game:block/food/meal/group9-sunflower-soya" },
-            "group10": { "base": "game:block/food/meal/group10-cabbage" },
-            "group11": { "base": "game:block/food/meal/group11-cassava" },
-            "group12": { "base": "game:block/food/meal/group12-peanut" },
-            "group13": { "base": "game:block/food/meal/group13-aubergine" },
-            "group14": { "base": "game:block/food/meal/group14-tomato" },
-            "group15": { "base": "game:block/food/meal/group15-walnut" },
-            "group17": { "base": "game:block/food/meal/group17-olive" },
-            "honey": { "base": "game:block/liquid/honey" },
-
-            "fruit-redapple": { "base": "game:block/food/pie/fill-apple" },
-            "fruit-pinkapple": { "base": "game:block/food/pie/fill-apple" },
-            "fruit-yellowapple": { "base": "game:block/food/pie/fill-apple" },
-            "fruit-cherry": { "base": "game:block/food/pie/fill-cherry" },
-            "fruit-peach": { "base": "game:block/food/pie/fill-peach" },
-            "fruit-pear": { "base": "game:block/food/pie/fill-pear" },
-            "fruit-orange": { "base": "game:block/food/pie/fill-orange" },
-            "fruit-mango": { "base": "game:block/food/pie/fill-mango" },
-            "fruit-pomegranate": { "base": "game:block/food/pie/fill-pomegranate" },
-            "fruit-lychee": { "base": "game:block/food/pie/fill-lychee" },
-            "fruit-breadfruit": { "base": "game:block/food/pie/fill-breadfruit" },
-
-            "rot-solids": { "base": "game:item/resource/rot/rot-solids" },
-            "rot-spill": { "base": "game:item/resource/rot/rot-spill" },
-
-            "milkportion": { "base": "game:block/food/dairy/milk" },
-            "cottagecheeseportion": { "base": "game:block/food/dairy/cottagecheese" },
-            "glue-hot": { "base": "game:block/liquid/glue-hot" },
-            "glue-cold": { "base": "game:block/liquid/glue-cold" },
-            "vegetable-reeds": { "base": "game:block/food/meal/group18-reeds" }
-        }
-    },
     "lightHsvByType": {
         "metalpot-uranium-*": [ 33, 7, 2 ]
     },

@@ -1,0 +1,48 @@
+[
+  {
+    "code": "cleanpot",
+    "enabled": false,
+    "sealHours": 12,
+    "ingredients": [
+      {
+        "type": "item",
+        "code": "soapportion-lye",
+        "litres": 10,
+        "consumeLitres": 10
+      },
+      {
+        "type": "block",
+        "code": "metalpots:dirtymetalpot-*-empty",
+        "name": "metal"
+      }
+    ],
+    "output": {
+      "type": "block",
+      "code": "metalpots:metalpot-{metal}-empty",
+      "quantity": 1
+    }
+  },
+  {
+    "code": "cleanpot2",
+    "enabled": false,
+    "sealHours": 12,
+    "ingredients": [
+      {
+        "type": "item",
+        "code": "soapportion-honey",
+        "litres": 5,
+        "consumeLitres": 5
+      },
+      {
+        "type": "block",
+        "code": "metalpots:dirtymetalpot-*-empty",
+        "name": "metal"
+      }
+    ],
+    "output": {
+      "type": "block",
+      "code": "metalpots:metalpot-{metal}-empty",
+      "quantity": 1
+    }
+  }
+]

@@ -21,8 +21,8 @@
         }
     ],
     "classByType": {
-        "dirtymetalpot-*-empty": "metalpots.MPBlockCookingContainer",
-        "dirtymetalpot-*-cooked": "metalpots.MPBlockCookedContainer"
+        "dirtymetalpot-*-empty": "MPBlockCookingContainer",
+        "dirtymetalpot-*-cooked": "MPBlockCookedContainer"
     },
     "heldTpIdleAnimation": "holdbothhandslarge",
     "heldTpUseAnimation": "twohandplaceblock",
@@ -71,7 +71,8 @@
     "blockmaterial": "Metal",
     "creativeinventory": {
         "general": [ "dirtymetalpot-*-empty" ],
-        "decorative": [ "dirtymetalpot-*-empty" ]
+        "decorative": [ "dirtymetalpot-*-empty" ],
+        "metalcookware": [ "dirtymetalpot-*-empty" ]
     },
     "replaceable": 400,
     "resistance": 1.5,

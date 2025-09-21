@@ -1,0 +1,14 @@
+[
+    {
+        "file": "metalpots:blocktypes/metalcrock.json",
+        "op": "replace",
+        "path": "/maxStackSizeByType/*",
+        "value": 8,
+        "side": "server",
+        "dependsOn": [
+            {
+                "modid": "unhallowedpatches"
+            }
+        ]
+    }
+]

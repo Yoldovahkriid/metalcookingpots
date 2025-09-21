@@ -1,0 +1,18 @@
+[
+    {
+      "file": "metalpots:recipes/barrel/justsoapandlye.json",
+      "op": "replace",
+      "path": "/0/enabled",
+      "side": "server",
+      "value": true,
+      "dependsOn": [ { "modid": "justsoapandlye" } ]
+    },
+    {
+      "file": "metalpots:recipes/barrel/justsoapandlye.json",
+      "op": "replace",
+      "path": "/1/enabled",
+      "side": "server",
+      "value": true,
+      "dependsOn": [ { "modid": "justsoapandlye" } ]
+    }
+]

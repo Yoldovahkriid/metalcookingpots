@@ -1,6 +1,12 @@
 {
+    "game:tabname-metalcookware": "Metall Kochgeschirr",
+
     "item-metalpottop-*": "Metalltopfdeckel",
     "item-metalpotbottom-*": "Metalltopf (Fehlender Deckel)",
+    "item-steelwool": "Stahlwolle",
+
+    "block-crockmold-raw-*": "Rohe irdener Topf Form",
+    "block-crockmold-burned-*": "Irdener Topf Form",
 
     "metalpottemplate": "{0} Metalltopf",
     "dirtymetalpottemplate": "{0} Metalltopf mit Rückständen",

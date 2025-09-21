@@ -1,0 +1,38 @@
+{
+    "game:tabname-metalcookware": "Ustensiles de cuisine en métal",
+
+    "item-metalpottop-*": "Couvercle de marmite en métal",
+    "item-metalpotbottom-*": "Marmite en métal (Sans couvercle)",
+    "item-steelwool": "Laine d'acier",
+
+    "block-crockmold-raw-*": "Moule de conserve brut",
+    "block-crockmold-burned-*": "Moule de conserve",
+
+    "metalpottemplate": "Marmite en {0}",
+    "dirtymetalpottemplate": "Marmite en {0} souillée",
+    "cookedmetalpottemplate": "Marmite en {0} contenant un plat cuisiné",
+    "metalcrocktemplate": "Conserve en {0}",
+
+    "metal-copper": "cuivre",
+    "metal-brass": "laiton",
+    "metal-tinbronze": "bronze-étain",
+    "metal-bismuthbronze": "bronze-bismuth",
+    "metal-blackbronze": "bronze noir",
+    "metal-silver": "argent",
+    "metal-gold": "or",
+    "metal-iron": "fer",
+    "metal-chromium": "chrome",
+    "metal-electrum": "electrum",
+    "metal-titanium": "titane",
+    "metal-molybdochalkos": "cuproplomb",
+    "metal-meteoriciron": "fer météorique",
+    "metal-steel": "acier",
+    "metal-cupronickel": "cupronickel",
+    "metal-nickel": "nickel",
+    "metal-platinum": "platine",
+    "metal-stainlesssteel": "acier inoxydable",
+    "metal-uranium": "uranium",
+    "metal-zinc": "zinc",
+
+    "blockdesc-dirtymetalpot-*-empty": "Dans un état répugnant, ne peut être utilisée pour la préparation des repas."
+}

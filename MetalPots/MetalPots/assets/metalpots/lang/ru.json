@@ -1,0 +1,38 @@
+{
+    "game:tabname-metalcookware": "Metal Cookware",
+
+    "item-metalpottop-*": "Металлическая крышка для кастрюли",
+    "item-metalpotbottom-*": "Металлическая кастрюля (Без крышки)",
+    "item-steelwool": "Стальная вата",
+
+    "block-crockmold-raw-*": "Сырая форма для кувшина",
+    "block-crockmold-burned-*": "Форма для кувшина",
+
+    "metalpottemplate": "{0} металлическая кастрюля",
+    "dirtymetalpottemplate": "Металлический горшок, покрытый осадками {0}",
+    "cookedmetalpottemplate": "{0} металлическая кастрюля с приготовленной едой",
+    "metalcrocktemplate": "{0} Металлический кувшин",
+
+    "metal-copper": "Медная",
+    "metal-brass": "Латунная",
+    "metal-tinbronze": "Оловянно-бронзовая",
+    "metal-bismuthbronze": "Висмутовая",
+    "metal-blackbronze": "Черно-бронзовая",
+    "metal-silver": "Серебрянная",
+    "metal-gold": "Золотая",
+    "metal-iron": "Железная",
+    "metal-chromium": "Хромированная",
+    "metal-electrum": "Электрумная",
+    "metal-titanium": "Титановая",
+    "metal-molybdochalkos": "Молибдохалковая",
+    "metal-meteoriciron": "Метеоритная",
+    "metal-steel": "Стальная",
+    "metal-cupronickel": "Мельхиоровая",
+    "metal-nickel": "Никелевая",
+    "metal-platinum": "Платиновая",
+    "metal-stainlesssteel": "Нержавеющая",
+    "metal-uranium": "Урановая",
+    "metal-zinc": "Цинковая",
+
+    "blockdesc-dirtymetalpot-*-empty": "Покрыт грязью, больше не может использоваться для приготовления пищи."
+}

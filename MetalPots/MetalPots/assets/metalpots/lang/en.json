@@ -1,6 +1,12 @@
 {
+    "game:tabname-metalcookware": "Metal Cookware",
+
     "item-metalpottop-*": "Metal Pot Lid",
     "item-metalpotbottom-*": "Metal Pot (Missing Lid)",
+    "item-steelwool": "Steel Wool",
+
+    "block-crockmold-raw-*": "Raw crock mold",
+    "block-crockmold-burned-*": "Crock mold",
 
     "metalpottemplate": "{0} metal pot",
     "dirtymetalpottemplate": "Residue-covered {0} metal pot",

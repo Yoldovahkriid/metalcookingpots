@@ -1,0 +1,30 @@
+{
+    "code": "steelwool",
+    "shape": {
+        "base": "metalpots:item/steelwool"
+    },
+    "texture": {
+        "base": "game:block/metal/ingot/steel"
+    },
+    "durability": 15,
+    "creativeinventory": {
+        "items": [ "*" ],
+        "tools": [ "*" ]
+    },
+    "guiTransform": {
+        "origin": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0
+        },
+        "scale": 3.5
+    },
+    "tpHandTransform": {
+        "translation": {
+            "x": -0.7,
+            "y": -0.3,
+            "z": -0.6
+        },
+        "scale": 0.75
+    }
+}

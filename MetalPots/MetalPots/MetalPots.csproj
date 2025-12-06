@@ -75,8 +75,4 @@
   </Content>
 </ItemGroup>
 
-<ItemGroup>
-  <Folder Include="assets\metalpots\shapes\block\clay\mold\" />
-</ItemGroup>
-
 </Project>

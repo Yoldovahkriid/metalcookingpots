@@ -6,26 +6,18 @@
         "allowedVariants": [ "copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "chromium", "electrum", "titanium", "molybdochalkos", "meteoriciron", "steel", "cupronickel", "nickel", "platinum", "stainlesssteel", "uranium", "zinc" ]
     },
     "name": "metalpotbottom",
-    "pattern": [
-        [
-            "####_####",
-            "####_####",
-            "####_####",
-            "####_####"
-        ],
-        [
-            "####_####",
-            "#__#_#__#",
-            "#__#_#__#",
-            "####_####"
-        ],
-        [
-            "####_####",
-            "#__#_#__#",
-            "#__#_#__#",
-            "####_####"
-        ]
+  "pattern": [
+    [
+      "###_###",
+      "###_###",
+      "###_###"
     ],
+    [
+      "###_###",
+      "#_#_#_#",
+      "###_###"
+    ]
+  ],
     "output": {
         "type": "block",
         "code": "metalpots:metalcrock-{metal}-east"

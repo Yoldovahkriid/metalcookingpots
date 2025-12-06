@@ -1,168 +1,169 @@
 {
-    "code": "crockmold",
-    "classByType": {
-        "crockmold-raw-*": "Block",
-        "crockmold-burned-*": "BlockToolMold"
-    },
-    "behaviorsByType": {
-        "*-raw-*": [
-            {
-                "name": "GroundStorable",
-                "properties": { "layout": "SingleCenter" }
-            },
-            {
-                "name": "Unplaceable",
-                "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility"
-            },
-            { "name": "RightClickPickup" }
-        ],
-        "*": [
-            { "name": "Lockable" },
-            { "name": "UnstableFalling" },
-            { "name": "HorizontalOrientable" }
-        ]
-    },
-    "entityBehaviorsByType": {
-        "crockmold-burned-*": [ { "name": "TemperatureSensitive" } ]
-    },
-    "variantgroups": [
-        {
-            "code": "materialtype",
-            "states": [ "raw", "burned" ]
-        },
-        {
-            "code": "side",
-            "loadFromProperties": "abstract/horizontalorientation"
-        }
+  "code": "crockmold",
+  "classByType": {
+    "crockmold-raw-*": "Block",
+    "crockmold-burned-*": "BlockToolMold"
+  },
+  "behaviorsByType": {
+    "*-raw-*": [
+      {
+        "name": "GroundStorable",
+        "properties": { "layout": "SingleCenter" }
+      },
+      {
+        "name": "Unplaceable",
+        "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility"
+      },
+      { "name": "RightClickPickup" }
     ],
-    "shapebytype": {
-        "*-north": {
-            "base": "block/clay/mold/crockmold",
-            "rotateY": 90
-        },
-        "*-east": {
-            "base": "block/clay/mold/crockmold",
-            "rotateY": 0
-        },
-        "*-south": {
-            "base": "block/clay/mold/crockmold",
-            "rotateY": 270
-        },
-        "*-west": {
-            "base": "block/clay/mold/crockmold",
-            "rotateY": 180
-        }
+    "*": [
+      { "name": "Lockable" },
+      { "name": "UnstableFalling" },
+      { "name": "HorizontalOrientable" }
+    ]
+  },
+  "entityBehaviorsByType": {
+    "crockmold-burned-*": [ { "name": "TemperatureSensitive" } ]
+  },
+  "variantgroups": [
+    {
+      "code": "materialtype",
+      "states": [ "raw", "burned" ]
     },
-    "texturesByType": {
-        "crockmold-raw-*": { "all": { "base": "game:block/clay/blueclay" } },
-        "crockmold-burned-*": {
-            "floor": { "base": "game:block/clay/ceramic-dark" },
-            "other": { "base": "game:block/clay/ceramic" }
-        }
+    {
+      "code": "side",
+      "loadFromProperties": "abstract/horizontalorientation"
+    }
+  ],
+  "shapebytype": {
+    "*-north": {
+      "base": "block/clay/mold/crockmold",
+      "rotateY": 90
     },
-    "attributes": {
-        "reinforcable": true,
-        "shatteredShape": { "base": "block/clay/mold/shattered-ingot" },
-        "onTongTransformByType": {
-            "*": {
-                "translation": {
-                    "x": -0.9,
-                    "y": -1.5,
-                    "z": -0.6
-                },
-                "rotation": {
-                    "x": 117,
-                    "y": 0,
-                    "z": 0
-                },
-                "scale": 0.74
-            }
-        }
+    "*-east": {
+      "base": "block/clay/mold/crockmold",
+      "rotateY": 0
     },
-    "attributesByType": {
-        "crockmold-burned-*": {
-            "requiredUnits": 300,
-            "fillHeight": 6,
-            "moldrackable": false,
-            "fillQuadsByLevel": [
-                {
-                    "x1": 6,
-                    "z1": 6,
-                    "x2": 10,
-                    "z2": 10
-                }
-            ],
-            "drop": {
-                "type": "Block",
-                "code": "metalpots:metalcrock-{metal}-east"
-            }
-        }
+    "*-south": {
+      "base": "block/clay/mold/crockmold",
+      "rotateY": 270
     },
-    "entityClassByType": {
-        "crockmold-burned-*": "ToolMold"
-    },
-    "combustiblePropsByType": {
-        "crockmold-raw-*": {
-            "meltingPoint": 650,
-            "meltingDuration": 45,
-            "smeltedRatio": 1,
-            "smeltingType": "fire",
-            "smeltedStack": {
-                "type": "block",
-                "code": "crockmold-burned-{side}"
-            },
-            "requiresContainer": false
-        }
-    },
-    "blockmaterial": "Ceramic",
-    "creativeinventory": {
-        "general": [ "*-north" ],
-        "construction": [ "*-north" ],
-        "metalcookware": [ "*-north" ]
-    },
-    "replaceable": 700,
-    "resistance": 1.5,
-    "maxStackSize": 4,
-    "lightAbsorption": 0,
-    "sounds": {
-        "walk": "walk/stone"
-    },
-    "collisionbox": {
-        "x1": 0.3125,
-        "y1": 0,
-        "z1": 0.3125,
-        "x2": 0.6875,
-        "y2": 0.4375,
-        "z2": 0.6875
-    },
-    "selectionbox": {
-        "x1": 0.3125,
-        "y1": 0,
-        "z1": 0.3125,
-        "x2": 0.6875,
-        "y2": 0.4375,
-        "z2": 0.6875
-    },
-    "sideopaque": {
-        "all": false
-    },
-    "sidesolid": {
-        "all": false
-    },
-    "guiTransform": {
-        "scale": 1.5
-    },
-    "tpHandTransform": {
+    "*-west": {
+      "base": "block/clay/mold/crockmold",
+      "rotateY": 180
+    }
+  },
+  "texturesByType": {
+    "crockmold-raw-*": { "all": { "base": "game:block/clay/blueclay" } },
+    "crockmold-burned-*": {
+      "floor": { "base": "game:block/clay/ceramic-dark" },
+      "other": { "base": "game:block/clay/ceramic" }
+    }
+  },
+  "attributes": {
+    "reinforcable": true,
+    "shatteredShape": { "base": "block/clay/mold/shattered-ingot" },
+    "onTongTransformByType": {
+      "*": {
         "translation": {
-            "x": -1.5,
-            "y": -0.9,
-            "z": -0.8
+          "x": -0.9,
+          "y": -1.5,
+          "z": -0.6
         },
         "rotation": {
-            "x": 28,
-            "y": 10,
-            "z": -86
+          "x": 117,
+          "y": 0,
+          "z": 0
         },
-        "scale": 0.5
+        "scale": 0.74
+      }
     }
+  },
+  "attributesByType": {
+    "crockmold-burned-*": {
+      "requiredUnits": 400,
+      "fillHeight": 6,
+      "moldrackable": false,
+      "fillQuadsByLevel": [
+        {
+          "x1": 3,
+          "z1": 3,
+          "x2": 13,
+          "z2": 13
+        }
+      ],
+      "drop": {
+        "type": "Block",
+        "code": "metalpots:metalcrock-{metal}-east",
+        "quantity": 4
+      }
+    }
+  },
+  "entityClassByType": {
+    "crockmold-burned-*": "ToolMold"
+  },
+  "combustiblePropsByType": {
+    "crockmold-raw-*": {
+      "meltingPoint": 650,
+      "meltingDuration": 45,
+      "smeltedRatio": 1,
+      "smeltingType": "fire",
+      "smeltedStack": {
+        "type": "block",
+        "code": "crockmold-burned-{side}"
+      },
+      "requiresContainer": false
+    }
+  },
+  "blockmaterial": "Ceramic",
+  "creativeinventory": {
+    "general": [ "*-north" ],
+    "construction": [ "*-north" ],
+    "metalcookware": [ "*-north" ]
+  },
+  "replaceable": 700,
+  "resistance": 1.5,
+  "maxStackSize": 4,
+  "lightAbsorption": 0,
+  "sounds": {
+    "walk": "game:walk/stone"
+  },
+  "collisionbox": {
+    "x1": 0.1875,
+    "y1": 0,
+    "z1": 0.1875,
+    "x2": 0.8125,
+    "y2": 0.4375,
+    "z2": 0.8125
+  },
+  "selectionbox": {
+    "x1": 0.1875,
+    "y1": 0,
+    "z1": 0.1875,
+    "x2": 0.8125,
+    "y2": 0.4375,
+    "z2": 0.8125
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "guiTransform": {
+    "scale": 1.5
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.5,
+      "y": -0.9,
+      "z": -0.8
+    },
+    "rotation": {
+      "x": 28,
+      "y": 10,
+      "z": -86
+    },
+    "scale": 0.5
+  }
 }

@@ -23,12 +23,8 @@
     },
     "heldTpIdleAnimation": "holdbothhands",
     "heldTpUseAnimation": "twohandplaceblock",
-    "classByType": {
-        "metalcrock-*": "MPBlockCrock"
-    },
-    "entityClassByType": {
-        "metalcrock-*": "Crock"
-    },
+    "class": "MPBlockCrock",
+    "entityClass": "Crock",
     "variantgroups": [
         {
             "code": "metal",

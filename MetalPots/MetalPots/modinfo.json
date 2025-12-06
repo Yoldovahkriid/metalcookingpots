@@ -6,7 +6,7 @@
         "Yoldovahkriid"
     ],
     "description": "Adds new and bigger Pots and Crocks",
-    "version": "1.6.2",
+    "version": "1.6.3",
     "dependencies": {
         "game": ""
     }

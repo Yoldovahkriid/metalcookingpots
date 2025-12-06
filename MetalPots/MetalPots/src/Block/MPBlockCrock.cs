@@ -18,6 +18,21 @@ namespace MetalPots.src.Block
             string metal = itemStack.Collectible.Variant["metal"];
             return Lang.Get("metalpots:metalcrocktemplate", Lang.Get("metalpots:metal-" + metal));
         }
+        public override bool MatchesForCrafting(ItemStack inputStack, GridRecipe gridRecipe, CraftingRecipeIngredient ingredient)
+        {
+            if (gridRecipe.Output.ResolvedItemstack?.Collectible is not MPBlockCrock) return base.MatchesForCrafting(inputStack, gridRecipe, ingredient);
+            bool sealingRecipe = false;
+            bool isSealed = false;
+
+            for (int i = 0; i < gridRecipe.resolvedIngredients.Length; i++)
+            {
+                ItemStack stack = gridRecipe.resolvedIngredients[i].ResolvedItemstack;
+                if (stack?.Collectible is MPBlockCrock) isSealed = stack.Attributes.GetBool("sealed");
+                else if (stack?.ItemAttributes["canSealMetalCrock"].AsBool(false) == true) sealingRecipe = true;
+            }
+
+            return sealingRecipe && !isSealed;
+        }
 
         public override void OnCreatedByCrafting(ItemSlot[] allInputslots, ItemSlot outputSlot, GridRecipe byRecipe)
         {

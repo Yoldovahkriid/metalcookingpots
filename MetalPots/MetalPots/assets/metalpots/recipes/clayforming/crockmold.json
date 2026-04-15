@@ -88,7 +88,7 @@
 
     "output": {
         "type": "block",
-        "code": "metalpots:crockmold-raw-north",
+        "code": "metalpots:crockmold-{type}-raw",
         "stacksize": 1
     }
 }

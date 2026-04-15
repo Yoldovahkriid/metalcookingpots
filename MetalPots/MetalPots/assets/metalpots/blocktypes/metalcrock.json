@@ -1,160 +1,215 @@
 {
-    "code": "metalcrock",
-    "behaviorsByType": {
-        "*": [
-            {
-                "name": "GroundStorable",
-                "properties": {
-                    "layout": "Quadrants",
-                    "placeRemoveSound": "game:sounds/player/build",
-                    "collisionBox": {
-                        "x1": 0,
-                        "y1": 0,
-                        "z1": 0,
-                        "x2": 1,
-                        "y2": 0.3125,
-                        "z2": 1
-                    }
-                }
-            },
-            { "name": "Unplaceable" },
-            { "name": "RightClickPickup" }
-        ]
-    },
-    "heldTpIdleAnimation": "holdbothhands",
-    "heldTpUseAnimation": "twohandplaceblock",
-    "class": "MPBlockCrock",
-    "entityClass": "Crock",
-    "variantgroups": [
-        {
-            "code": "metal",
-            "states": [ "copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "chromium", "electrum", "titanium", "molybdochalkos", "meteoriciron", "steel", "cupronickel", "nickel", "platinum", "stainlesssteel", "uranium", "zinc" ]
-        },
-        {
-            "code": "side",
-            "loadFromProperties": "abstract/horizontalorientation"
+  "code": "metalcrock",
+  "behaviorsByType": {
+    "*": [
+      {
+        "name": "GroundStorable",
+        "properties": {
+          "layout": "Quadrants",
+          "placeRemoveSound": "game:sounds/player/build",
+          "collisionBox": {
+            "x1": 0,
+            "y1": 0,
+            "z1": 0,
+            "x2": 1,
+            "y2": 0.3125,
+            "z2": 1
+          }
         }
-    ],
-    "attributesByType": {
-        "metalcrock-*": {
-            "shelvable": true,
-            "mealContainer": true,
-            "mealBlockCode": "metalpots:metalcrock-{metal}-{side}",
-            "servingCapacity": 8,
-            "bowlContents": null,
-            "handleLiquidContainerInteract": true,
-            "handleCookingContainerInteract": true,
-            "emptiedBlockCode": "metalpots:metalcrock-{metal}-{side}"
-        }
+      },
+      { "name": "Unplaceable" },
+      { "name": "RightClickPickup" }
+    ]
+  },
+  "heldTpIdleAnimation": "holdbothhands",
+  "heldTpUseAnimation": "twohandplaceblock",
+  "class": "MPBlockCrock",
+  "entityClass": "Crock",
+  "variantgroups": [
+    {
+      "code": "metal",
+      "states": [ "copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "chromium", "electrum", "titanium", "molybdochalkos", "meteoriciron", "steel", "cupronickel", "nickel", "platinum", "stainlesssteel", "uranium", "zinc" ]
     },
-    "shapeByType": {
-        "*-north": {
-            "base": "metalpots:block/clay/crock/base",
-            "rotateY": 0
-        },
-        "*-east": {
-            "base": "metalpots:block/clay/crock/base",
-            "rotateY": 270
-        },
-        "*-west": {
-            "base": "metalpots:block/clay/crock/base",
-            "rotateY": 90
-        },
-        "*-south": {
-            "base": "metalpots:block/clay/crock/base",
-            "rotateY": 180
-        }
-    },
-    "doNotRenderAtLod2": true,
-    "blockmaterial": "Metal",
-    "creativeinventory": {
-        "general": [ "metalcrock-{metal}-east" ],
-        "decorative": [ "metalcrock-{metal}-east" ],
-        "metalcookware": [ "metalcrock-{metal}-east" ]
-    },
-    "replaceable": 400,
-    "resistance": 1.5,
-    "maxStackSizeByType": {
-        "*": 1
-    },
-    "lightAbsorption": 0,
-    "texturesByType": {
-        "*": {
-            "ceramic": {
-                "base": "metalpots:block/metal/crock/{metal}"
-            },
-            "label": { "base": "game:block/clay/crock/label" }
-        }
-    },
-    "sounds": {
-        "walk": "game:walk/stone"
-    },
-    "sideopaque": { "all": false },
-    "sidesolid": { "all": false },
-    "emitsideao": { "all": false },
-    "collisionbox": {
-        "x1": 0.25,
-        "y1": 0,
-        "z1": 0.25,
-        "x2": 0.75,
-        "y2": 0.3125,
-        "z2": 0.75
-    },
-    "selectionbox": {
-        "x1": 0.25,
-        "y1": 0,
-        "z1": 0.25,
-        "x2": 0.75,
-        "y2": 0.3125,
-        "z2": 0.75
-    },
-    "guiTransform": {
-        "rotation": {
-            "x": -22.6,
-            "y": -125,
-            "z": 0
-        },
-        "origin": {
-            "x": 0.5,
-            "y": 0.18,
-            "z": 0.5
-        },
-        "scale": 2.5
-    },
-    "tpHandTransform": {
-        "translation": {
-            "x": -0.56,
-            "y": -0.1,
-            "z": -0.8
-        },
-        "rotation": {
-            "x": -139,
-            "y": -21,
-            "z": -118
-        },
-        "origin": {
-            "x": 0.5,
-            "y": 0.01,
-            "z": 0.5
-        },
-        "scale": 0.65
-    },
-    "attributes": {
-        "groundStorageTransform": {
-            "origin": {
-                "x": 0.5,
-                "y": 0,
-                "z": 0.5
-            },
-            "scale": 0.75
-        },
-        "onshelfTransform": {
-            "origin": {
-                "x": 0.5,
-                "y": 0,
-                "z": 0.5
-            },
-            "scale": 0.7
-        }
+    {
+      "code": "side",
+      "loadFromProperties": "abstract/horizontalorientation"
     }
+  ],
+  "attributes": {
+    "shelvable": true,
+    "mealContainer": true,
+    "mealBlockCode": "metalpots:metalcrock-{metal}-{side}",
+    "servingCapacity": 8,
+    "bowlContents": null,
+    "handleLiquidContainerInteract": true,
+    "handleCookingContainerInteract": true,
+    "emptiedBlockCode": "metalpots:metalcrock-{metal}-{side}",
+    "labelNames": [
+      "carrot",
+      "cabbage",
+      "onion",
+      "parsnip",
+      "turnip",
+      "pumpkin",
+      "soybean",
+      "bellpepper",
+      "cassava",
+      "fennel",
+      "mushroom",
+      "redmeat",
+      "poultry",
+      "porridge",
+      "egg",
+      "fish",
+      "bushmeat",
+      "blueberry",
+      "cranberry",
+      "redcurrant",
+      "whitecurrant",
+      "blackcurrant",
+      "saguaro",
+      "pineapple",
+      "redapple",
+      "pinkapple",
+      "yellowapple",
+      "cherry",
+      "peach",
+      "pear",
+      "orange",
+      "mango",
+      "breadfruit",
+      "lychee",
+      "pomegranate",
+      "beautyberry",
+      "blackberry",
+      "cactusfruit",
+      "cloudberry",
+      "gooseberry",
+      "guava",
+      "kumquat",
+      "plumnatal",
+      "raspberry",
+      "strawberry",
+      "olive"
+    ],
+    "onshelfTransform": {
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "scale": 0.5
+    },
+    "groundStorageTransform": {
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "scale": 0.6
+    }
+  },
+  "shapeByType": {
+    "*-north": {
+      "base": "metalpots:block/clay/crock/base",
+      "rotateY": 0
+    },
+    "*-east": {
+      "base": "metalpots:block/clay/crock/base",
+      "rotateY": 270
+    },
+    "*-west": {
+      "base": "metalpots:block/clay/crock/base",
+      "rotateY": 90
+    },
+    "*-south": {
+      "base": "metalpots:block/clay/crock/base",
+      "rotateY": 180
+    }
+  },
+  "doNotRenderAtLod2": true,
+  "blockmaterial": "Metal",
+  "creativeinventory": {
+    "general": [ "metalcrock-{metal}-east" ],
+    "decorative": [ "metalcrock-{metal}-east" ],
+    "metalcookware": [ "metalcrock-{metal}-east" ]
+  },
+  "replaceable": 400,
+  "resistance": 1.5,
+  "maxStackSizeByType": {
+    "*": 1
+  },
+  "lightAbsorption": 0,
+  "texturesByType": {
+    "*": {
+      "metal": {
+        "base": "game:block/metal/ingot/{metal}",
+        "blendedOverlays": [
+          {
+            "base": "metalpots:block/metal/crock/crockoverlay",
+            "blendMode": 1
+          }
+        ]
+      },
+      "lidmetal": {
+        "base": "game:block/metal/ingot/{metal}"
+      },
+      "label": { "base": "metalpots:block/metal/crock/label" },
+      "label2": { "base": "metalpots:block/metal/crock/label2" },
+      "label3": { "base": "game:block/clay/crock/label3" }
+    }
+  },
+  "sounds": {
+    "walk": "game:walk/stone"
+  },
+  "sideopaque": { "all": false },
+  "sidesolid": { "all": false },
+  "emitsideao": { "all": false },
+  "collisionbox": {
+    "x1": 0.25,
+    "y1": 0,
+    "z1": 0.25,
+    "x2": 0.75,
+    "y2": 0.3125,
+    "z2": 0.75
+  },
+  "selectionbox": {
+    "x1": 0.25,
+    "y1": 0,
+    "z1": 0.25,
+    "x2": 0.75,
+    "y2": 0.3125,
+    "z2": 0.75
+  },
+  "guiTransform": {
+    "rotation": {
+      "x": -20,
+      "y": -90,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.4,
+      "z": 0.5
+    },
+    "scale": 1.75
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -0.9,
+      "y": -0.2,
+      "z": -0.9
+    },
+    "rotation": {
+      "x": -135,
+      "y": 0,
+      "z": -90
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.01,
+      "z": 0.5
+    },
+    "scale": 0.5
+  }
 }

@@ -1,11 +1,14 @@
 {
   "code": "crockmold",
   "classByType": {
-    "crockmold-raw-*": "Block",
-    "crockmold-burned-*": "BlockToolMold"
+    "crockmold-*-raw": "Block",
+    "crockmold-*-fired": "BlockToolMold"
+  },
+  "entityClassByType": {
+    "crockmold-*-fired": "ToolMold"
   },
   "behaviorsByType": {
-    "*-raw-*": [
+    "*-raw": [
       {
         "name": "GroundStorable",
         "properties": { "layout": "SingleCenter" }
@@ -23,46 +26,37 @@
     ]
   },
   "entityBehaviorsByType": {
-    "crockmold-burned-*": [ { "name": "TemperatureSensitive" } ]
+    "crockmold-*-fired": [ { "name": "TemperatureSensitive" } ]
   },
   "variantgroups": [
     {
-      "code": "materialtype",
-      "states": [ "raw", "burned" ]
+      "code": "color",
+      "states": [ "blue", "fire", "black", "brown", "cream", "earthyorange", "gray", "orange", "red", "tan" ]
     },
     {
-      "code": "side",
-      "loadFromProperties": "abstract/horizontalorientation"
+      "code": "materialtype",
+      "states": [ "raw", "fired" ]
     }
   ],
-  "shapebytype": {
-    "*-north": {
-      "base": "block/clay/mold/crockmold",
-      "rotateY": 90
-    },
-    "*-east": {
-      "base": "block/clay/mold/crockmold",
-      "rotateY": 0
-    },
-    "*-south": {
-      "base": "block/clay/mold/crockmold",
-      "rotateY": 270
-    },
-    "*-west": {
-      "base": "block/clay/mold/crockmold",
-      "rotateY": 180
-    }
-  },
+  "skipVariants": [
+    "crockmold-black-raw",
+    "crockmold-brown-raw",
+    "crockmold-cream-raw",
+    "crockmold-gray-raw",
+    "crockmold-orange-raw",
+    "crockmold-earthyorange-raw",
+    "crockmold-tan-raw"
+  ],
+  "shape": {"base": "block/clay/mold/crockmold"},
   "texturesByType": {
-    "crockmold-raw-*": { "all": { "base": "game:block/clay/blueclay" } },
-    "crockmold-burned-*": {
-      "floor": { "base": "game:block/clay/ceramic-dark" },
-      "other": { "base": "game:block/clay/ceramic" }
+    "crockmold-*-raw": { "all": { "base": "game:block/clay/{color}clay" } },
+    "crockmold-*-fired": {
+      "all": { "base": "game:block/clay/hardened/{color}" }
     }
   },
   "attributes": {
     "reinforcable": true,
-    "shatteredShape": { "base": "block/clay/mold/shattered-ingot" },
+    "shatteredShape": { "base": "game:block/clay/mold/shattered-ingot" },
     "onTongTransformByType": {
       "*": {
         "translation": {
@@ -80,7 +74,67 @@
     }
   },
   "attributesByType": {
-    "crockmold-burned-*": {
+    "crockmold-red-raw": {
+      "beehivekiln": {
+        "0": {
+          "type": "block",
+          "code": "metalpots:crockmold-tan-fired"
+        },
+        "1": {
+          "type": "block",
+          "code": "metalpots:crockmold-orange-fired"
+        },
+        "2": {
+          "type": "block",
+          "code": "metalpots:crockmold-red-fired"
+        },
+        "3": {
+          "type": "block",
+          "code": "metalpots:crockmold-brown-fired"
+        }
+      }
+    },
+    "crockmold-blue-raw": {
+      "beehivekiln": {
+        "0": {
+          "type": "block",
+          "code": "metalpots:crockmold-cream-fired"
+        },
+        "1": {
+          "type": "block",
+          "code": "metalpots:crockmold-gray-fired"
+        },
+        "2": {
+          "type": "block",
+          "code": "metalpots:crockmold-black-fired"
+        },
+        "3": {
+          "type": "block",
+          "code": "metalpots:crockmold-black-fired"
+        }
+      }
+    },
+    "crockmold-fire-raw": {
+      "beehivekiln": {
+        "0": {
+          "type": "block",
+          "code": "metalpots:crockmold-fire-fired"
+        },
+        "1": {
+          "type": "block",
+          "code": "metalpots:crockmold-fire-fired"
+        },
+        "2": {
+          "type": "block",
+          "code": "metalpots:crockmold-fire-fired"
+        },
+        "3": {
+          "type": "block",
+          "code": "metalpots:crockmold-fire-fired"
+        }
+      }
+    },
+    "crockmold-*-fired": {
       "requiredUnits": 400,
       "fillHeight": 6,
       "moldrackable": false,
@@ -99,27 +153,46 @@
       }
     }
   },
-  "entityClassByType": {
-    "crockmold-burned-*": "ToolMold"
-  },
   "combustiblePropsByType": {
-    "crockmold-raw-*": {
+    "crockmold-fire-raw": {
       "meltingPoint": 650,
       "meltingDuration": 45,
       "smeltedRatio": 1,
       "smeltingType": "fire",
       "smeltedStack": {
         "type": "block",
-        "code": "crockmold-burned-{side}"
+        "code": "metalpots:crockmold-fire-fired"
+      },
+      "requiresContainer": false
+    },
+    "crockmold-blue-raw": {
+      "meltingPoint": 650,
+      "meltingDuration": 45,
+      "smeltedRatio": 1,
+      "smeltingType": "fire",
+      "smeltedStack": {
+        "type": "block",
+        "code": "metalpots:crockmold-blue-fired"
+      },
+      "requiresContainer": false
+    },
+    "crockmold-red-raw": {
+      "meltingPoint": 650,
+      "meltingDuration": 45,
+      "smeltedRatio": 1,
+      "smeltingType": "fire",
+      "smeltedStack": {
+        "type": "block",
+        "code": "metalpots:crockmold-earthyorange-fired"
       },
       "requiresContainer": false
     }
   },
   "blockmaterial": "Ceramic",
   "creativeinventory": {
-    "general": [ "*-north" ],
-    "construction": [ "*-north" ],
-    "metalcookware": [ "*-north" ]
+    "general": [ "*" ],
+    "construction": [ "*" ],
+    "metalcookware": [ "*" ]
   },
   "replaceable": 700,
   "resistance": 1.5,

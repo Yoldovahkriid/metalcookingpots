@@ -1,44 +1,69 @@
 {
-    "code": "metalpottop",
-    "creativeinventory": {
-        "general": [ "*" ]
-    },
-    "variantgroups": [
-        {
-            "code": "metal",
-            "states": [ "copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "chromium", "electrum", "titanium", "molybdochalkos", "meteoriciron", "steel", "cupronickel", "nickel", "platinum", "stainlesssteel", "uranium", "zinc" ]
-        }
-    ],
-    "shape": {
-        "base": "metalpots:item/metalpottop"
-    },
-    "texture": {
-        "base": "game:block/metal/ingot/{metal}"
-    },
-    "guiTransform": {
-        "translation": {
-            "x": 22,
-            "y": -48,
-            "z": 0
-        },
-        "rotation": {
-            "x": -45,
-            "y": -45,
-            "z": -180
-        },
-        "scale": 2.75
-    },
-    "tpHandTransform": {
-        "translation": {
-            "x": -1.5,
-            "y": -1.2,
-            "z": -1.4
-        },
-        "rotation": {
-            "x": -25,
-            "y": -62,
-            "z": 18
-        },
-        "scale": 0.37
+  "code": "metalpottop",
+  "creativeinventory": {
+    "general": [ "*" ]
+  },
+  "variantgroups": [
+    {
+      "code": "metal",
+      "states": [ "copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "chromium", "electrum", "titanium", "molybdochalkos", "meteoriciron", "steel", "cupronickel", "nickel", "platinum", "stainlesssteel", "uranium", "zinc" ]
     }
+  ],
+  "shape": {
+    "base": "metalpots:item/metalpottop"
+  },
+  "texture": {
+    "base": "game:block/metal/ingot/{metal}"
+  },
+  "attributes": {
+    "onTongTransform": {
+      "translation": {
+        "x": -1.45,
+        "y": -0.2,
+        "z": -0.75
+      },
+      "rotation": {
+        "x": 0,
+        "y": 45,
+        "z": 0
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "scale": 0.7
+    }
+  },
+  "guiTransform": {
+    "translation": {
+      "x": 0,
+      "y": -24,
+      "z": 0
+    },
+    "rotation": {
+      "x": -45,
+      "y": -45,
+      "z": -180
+    },
+    "scale": 2.75
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -0.9,
+      "y": 0,
+      "z": -0.65
+    },
+    "rotation": {
+      "x": 0,
+      "y": -45,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    },
+    "scale": 0.75
+  }
 }

@@ -107,6 +107,25 @@
         "z": 0.5
       },
       "scale": 0.6
+    },
+    "tongOpening": "wide",
+    "onTongTransform": {
+      "translation": {
+        "x": -1.7,
+        "y": -0.2,
+        "z": -1.3
+      },
+      "rotation": {
+        "x": 90,
+        "y": 0,
+        "z": 0
+      },
+      "origin": {
+        "x": 0.5,
+        "y": 0,
+        "z": 0.5
+      },
+      "scale": 0.6
     }
   },
   "shapeByType": {

@@ -7,10 +7,11 @@
         "base": "game:block/metal/ingot/steel"
     },
     "durability": 15,
-    "creativeinventory": {
-        "items": [ "*" ],
-        "tools": [ "*" ]
-    },
+  "creativeinventory": {
+    "items": [ "*" ],
+    "tools": [ "*" ],
+    "metalcookware": [ "*" ]
+  },
     "guiTransform": {
         "origin": {
             "x": 0.5,

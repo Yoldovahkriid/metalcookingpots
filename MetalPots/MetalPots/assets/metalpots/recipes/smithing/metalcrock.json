@@ -1,11 +1,11 @@
 {
-    "ingredient": {
-        "type": "item",
-        "code": "game:ingot-*",
-        "name": "metal",
-        "allowedVariants": [ "copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "chromium", "electrum", "titanium", "molybdochalkos", "meteoriciron", "steel", "cupronickel", "nickel", "platinum", "stainlesssteel", "uranium", "zinc" ]
-    },
-    "name": "metalpotbottom",
+  "code": "metalcrock-{metal}",
+  "ingredient": {
+    "type": "item",
+    "code": "game:ingot-*",
+    "name": "metal",
+    "allowedVariants": [ "copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "chromium", "electrum", "titanium", "molybdochalkos", "meteoriciron", "steel", "cupronickel", "nickel", "platinum", "stainlesssteel", "uranium", "zinc" ]
+  },
   "pattern": [
     [
       "###_###",
@@ -18,8 +18,8 @@
       "###_###"
     ]
   ],
-    "output": {
-        "type": "block",
-        "code": "metalpots:metalcrock-{metal}-east"
-    }
+  "output": {
+    "type": "block",
+    "code": "metalpots:metalcrock-{metal}-east"
+  }
 }

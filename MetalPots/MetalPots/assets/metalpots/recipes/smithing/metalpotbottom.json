@@ -1,51 +1,51 @@
 {
-    "ingredient": {
-        "type": "item",
-        "code": "game:ingot-*",
-        "name": "metal",
-        "allowedVariants": [ "copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "chromium", "electrum", "titanium", "molybdochalkos", "meteoriciron", "steel", "cupronickel", "nickel", "platinum", "stainlesssteel", "uranium", "zinc" ]
-    },
-    "name": "metalpotbottom",
-    "pattern": [
-        [
-            "#######",
-            "#######",
-            "#######",
-            "#######",
-            "#######",
-            "#######",
-            "#######"
-        ],
-        [
-            "#######",
-            "#_____#",
-            "#_____#",
-            "#_____#",
-            "#_____#",
-            "#_____#",
-            "#######"
-        ],
-        [
-            "#######",
-            "#_____#",
-            "#_____#",
-            "#_____#",
-            "#_____#",
-            "#_____#",
-            "#######"
-        ],
-        [
-            "#######",
-            "#_____#",
-            "#_____#",
-            "#_____#",
-            "#_____#",
-            "#_____#",
-            "#######"
-        ]
+  "code": "metalpotbottom-{metal}",
+  "ingredient": {
+    "type": "item",
+    "code": "game:ingot-*",
+    "name": "metal",
+    "allowedVariants": [ "copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "chromium", "electrum", "titanium", "molybdochalkos", "meteoriciron", "steel", "cupronickel", "nickel", "platinum", "stainlesssteel", "uranium", "zinc" ]
+  },
+  "pattern": [
+    [
+      "#######",
+      "#######",
+      "#######",
+      "#######",
+      "#######",
+      "#######",
+      "#######"
     ],
-    "output": {
-        "type": "item",
-        "code": "metalpots:metalpotbottom-{metal}"
-    }
+    [
+      "#######",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#######"
+    ],
+    [
+      "#######",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#######"
+    ],
+    [
+      "#######",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#_____#",
+      "#######"
+    ]
+  ],
+  "output": {
+    "type": "item",
+    "code": "metalpots:metalpotbottom-{metal}"
+  }
 }

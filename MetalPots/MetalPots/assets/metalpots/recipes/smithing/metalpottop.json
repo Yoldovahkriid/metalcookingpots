@@ -1,33 +1,33 @@
 {
-    "ingredient": {
-        "type": "item",
-        "code": "game:ingot-*",
-        "name": "metal",
-        "allowedVariants": [ "copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "chromium", "electrum", "titanium", "molybdochalkos", "meteoriciron", "steel", "cupronickel", "nickel", "platinum", "stainlesssteel", "uranium", "zinc" ]
-    },
-    "name": "metalpottop",
-    "pattern": [
-        [
-            "#######",
-            "#######",
-            "#######",
-            "#######",
-            "#######",
-            "#######",
-            "#######"
-        ],
-        [
-            "_______",
-            "_______",
-            "_______",
-            "___#___",
-            "_______",
-            "_______",
-            "_______"
-        ]
+  "code": "metalpottop-{metal}",
+  "ingredient": {
+    "type": "item",
+    "code": "game:ingot-*",
+    "name": "metal",
+    "allowedVariants": [ "copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "chromium", "electrum", "titanium", "molybdochalkos", "meteoriciron", "steel", "cupronickel", "nickel", "platinum", "stainlesssteel", "uranium", "zinc" ]
+  },
+  "pattern": [
+    [
+      "#######",
+      "#######",
+      "#######",
+      "#######",
+      "#######",
+      "#######",
+      "#######"
     ],
-    "output": {
-        "type": "item",
-        "code": "metalpots:metalpottop-{metal}"
-    }
+    [
+      "_______",
+      "_______",
+      "_______",
+      "___#___",
+      "_______",
+      "_______",
+      "_______"
+    ]
+  ],
+  "output": {
+    "type": "item",
+    "code": "metalpots:metalpottop-{metal}"
+  }
 }

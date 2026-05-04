@@ -1,12 +1,26 @@
 [
-    {
-        "file": "foodshelves:config/restrictions/general/holderuniversal.json",
-        "op": "addmerge",
-        "path": "/CollectibleCodes",
-        "side": "server",
-        "value": [
-            "metalpots:metalcrock*-*"
-        ],
-        "dependsOn": [ { "modid": "foodshelves" } ]
-    }
+  {
+    "file": "foodshelves:config/restrictions/general/holderuniversal.json",
+    "op": "addmerge",
+    "path": "/CollectibleCodes",
+    "side": "Server",
+    "value": [
+      "metalpots:metalcrock-*"
+    ],
+    "dependsOn": [ { "modid": "foodshelves" } ]
+  },
+  {
+    "file": "foodshelves:config/transformations/general/holderuniversal.json",
+    "op": "addmerge",
+    "path": "/metalpots:metalcrock-*",
+    "value": {
+        "origin": {
+          "x": 0.5,
+          "y": 0,
+          "z": 0.5
+        },
+        "scale": 0.5
+    },
+    "dependsOn": [ { "modid": "foodshelves" } ]
+  }
 ]

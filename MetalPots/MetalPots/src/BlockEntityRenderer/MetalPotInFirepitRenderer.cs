@@ -47,7 +47,6 @@ namespace MetalPots.BlockEntityRenderer
             }
             else
             {
-                // Fixed: PathStartsWith replaced with Path.StartsWith
                 string basePath = potBlock.Code.Path.StartsWith("dirtymetalpot") ? "metalpots:shapes/block/metal/dirty-metalpot-" : "metalpots:shapes/block/metal/metalpot-";
                 MeshData potMesh;
                 capi.Tesselator.TesselateShape(potBlock, Shape.TryGet(capi, basePath + "opened-empty-withtrivet.json"), out potMesh);
@@ -63,7 +62,6 @@ namespace MetalPots.BlockEntityRenderer
         {
             potRef?.Dispose();
             lidRef?.Dispose();
-            // Note: potWithFoodRef belongs to a central cache managed by MPMealMeshCache and shouldn't be disposed here.
 
             cookingSound?.Stop();
             cookingSound?.Dispose();

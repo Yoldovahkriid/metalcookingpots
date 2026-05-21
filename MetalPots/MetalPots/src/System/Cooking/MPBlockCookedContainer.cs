@@ -33,7 +33,6 @@ namespace MetalPots.Blocks
             CookingRecipe recipe = GetCookingRecipe(capi.World, itemstack);
             ItemStack[] contents = GetNonEmptyContents(capi.World, itemstack);
 
-            // Note: We now pass itemstack at the end to help our new caching logic
             MultiTextureMeshRef meshref = meshCache.GetOrCreateMealInContainerMeshRef(this, recipe, contents, new Vec3f(0, yoff / 16f, 0), itemstack);
             if (meshref != null) renderinfo.ModelRef = meshref;
         }
@@ -55,7 +54,7 @@ namespace MetalPots.Blocks
         public override string GetHeldItemName(ItemStack itemStack)
         {
             ItemStack[] contentStacks = GetContents(api.World, itemStack);
-            if (MealMeshCache.ContentsRotten(contentStacks)) // Use base logic
+            if (MealMeshCache.ContentsRotten(contentStacks))
             {
                 return Lang.Get("Pot of rotten food");
             }

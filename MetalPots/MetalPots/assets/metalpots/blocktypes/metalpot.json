@@ -1,45 +1,45 @@
 {
-    "code": "metalpot",
-    "classByType": {
-        "metalpot-*-empty": "MPBlockCookingContainer",
-        "metalpot-*-cooked": "MPBlockCookedContainer"
-    },
-    "entityclassByType": {
-        "*-cooked": "CookedContainer"
-    },
-    "behaviors": [
-        {
-            "name": "GroundStorable",
-            "properties": {
-                "layout": "SingleCenter",
-                "collisionBox": {
-                    "x1": 0,
-                    "y1": 0,
-                    "z1": 0,
-                    "x2": 1,
-                    "y2": 0.4375,
-                    "z2": 1
-                }
-            }
-        },
-        {
-            "name": "Unplaceable",
-            "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility"
+  "code": "metalpot",
+  "classByType": {
+    "metalpot-*-empty": "MPBlockCookingContainer",
+    "metalpot-*-cooked": "MPBlockCookedContainer"
+  },
+  "entityclassByType": {
+    "*-cooked": "CookedContainer"
+  },
+  "behaviors": [
+    {
+      "name": "GroundStorable",
+      "properties": {
+        "layout": "SingleCenter",
+        "collisionBox": {
+          "x1": 0,
+          "y1": 0,
+          "z1": 0,
+          "x2": 1,
+          "y2": 0.4375,
+          "z2": 1
         }
-    ],
-    "heldTpIdleAnimation": "holdbothhandslarge",
-    "heldTpUseAnimation": "twohandplaceblock",
-    "variantgroups": [
-        {
-            "code": "metal",
-            "states": [ "copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "chromium", "electrum", "titanium", "molybdochalkos", "meteoriciron", "steel", "cupronickel", "nickel", "platinum", "stainlesssteel", "uranium", "zinc" ]
-        },
-        {
-            "code": "type",
-            "states": [ "empty", "cooked" ]
-        }
-    ],
-    "shape": { "base": "metalpots:block/metal/metalpot-opened-empty" },
+      }
+    },
+    {
+      "name": "Unplaceable",
+      "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility"
+    }
+  ],
+  "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldTpUseAnimation": "twohandplaceblock",
+  "variantgroups": [
+    {
+      "code": "metal",
+      "states": [ "copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "chromium", "electrum", "titanium", "molybdochalkos", "meteoriciron", "steel", "cupronickel", "nickel", "platinum", "stainlesssteel", "uranium", "zinc" ]
+    },
+    {
+      "code": "type",
+      "states": [ "empty", "cooked" ]
+    }
+  ],
+  "shape": { "base": "metalpots:block/metal/metalpot-opened-empty" },
   "textures": {
     "transparent": { "base": "game:block/transparent" },
     "ceramic": { "base": "game:block/metal/ingot/{metal}" },
@@ -110,80 +110,80 @@
       "useFirepitModel": "Wide"
     }
   },
-    "attributesByType": {
-        "metalpot-*-empty": {
-            "cookingContainerSlots": 4,
-            "maxContainerSlotStackSize": 24,
-            "cookingSlotCapacityLitres": 24,
-            "dirtiedBlockCode": "metalpots:dirtymetalpot-{metal}-cooked"
-        },
-
-        "metalpot-*-cooked": {
-            "mealContainer": true,
-            "emptiedBlockCode": "metalpots:metalpot-{metal}-empty",
-            "allowHeating": true,
-            "handleCookingContainerInteract": true
-        }
+  "attributesByType": {
+    "metalpot-*-empty": {
+      "cookingContainerSlots": 4,
+      "maxContainerSlotStackSize": 24,
+      "cookingSlotCapacityLitres": 24,
+      "dirtiedBlockCode": "metalpots:dirtymetalpot-{metal}-cooked"
     },
 
-    "doNotRenderAtLod2": true,
-    "blockmaterial": "Metal",
-    "creativeinventory": {
-        "general": [ "metalpot-*-empty" ],
-        "decorative": [ "metalpot-*-empty" ],
-        "metalcookware": [ "metalpot-*-empty" ]
-    },
-    "replaceable": 400,
-    "resistance": 1.5,
-    "maxStackSizeByType": {
-        "*-cooked": 1,
-        "*": 4
-    },
-    "lightAbsorption": 0,
-    "lightHsvByType": {
-        "metalpot-uranium-*": [ 33, 7, 2 ]
-    },
-    "sounds": {
-        "walk": "game:walk/stone"
-    },
-    "sideopaque": {
-        "all": false
-    },
-    "sidesolid": {
-        "all": false
-    },
-    "collisionbox": {
-        "x1": 0.28,
-        "y1": 0,
-        "z1": 0.28,
-        "x2": 0.72,
-        "y2": 0.35,
-        "z2": 0.72
-    },
-    "selectionbox": {
-        "x1": 0.28,
-        "y1": 0,
-        "z1": 0.28,
-        "x2": 0.72,
-        "y2": 0.35,
-        "z2": 0.72
-    },
-    "tpHandTransform": {
-        "translation": {
-            "x": -0.7,
-            "y": 0.06,
-            "z": -0.47
-        },
-        "rotation": {
-            "x": -52,
-            "y": 20,
-            "z": -110
-        },
-        "origin": {
-            "x": 0.5,
-            "y": 0,
-            "z": 0.5
-        },
-        "scale": 0.6
+    "metalpot-*-cooked": {
+      "mealContainer": true,
+      "emptiedBlockCode": "metalpots:metalpot-{metal}-empty",
+      "allowHeating": true,
+      "handleCookingContainerInteract": true
     }
+  },
+
+  "doNotRenderAtLod2": true,
+  "blockmaterial": "Metal",
+  "creativeinventory": {
+    "general": [ "metalpot-*-empty" ],
+    "decorative": [ "metalpot-*-empty" ],
+    "metalcookware": [ "metalpot-*-empty" ]
+  },
+  "replaceable": 400,
+  "resistance": 1.5,
+  "maxStackSizeByType": {
+    "*-cooked": 1,
+    "*": 4
+  },
+  "lightAbsorption": 0,
+  "lightHsvByType": {
+    "metalpot-uranium-*": [ 33, 7, 2 ]
+  },
+  "sounds": {
+    "walk": "game:walk/stone"
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "collisionbox": {
+    "x1": 0.28,
+    "y1": 0,
+    "z1": 0.28,
+    "x2": 0.72,
+    "y2": 0.35,
+    "z2": 0.72
+  },
+  "selectionbox": {
+    "x1": 0.28,
+    "y1": 0,
+    "z1": 0.28,
+    "x2": 0.72,
+    "y2": 0.35,
+    "z2": 0.72
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -0.7,
+      "y": 0.06,
+      "z": -0.47
+    },
+    "rotation": {
+      "x": -52,
+      "y": 20,
+      "z": -110
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0,
+      "z": 0.5
+    },
+    "scale": 0.6
+  }
 }

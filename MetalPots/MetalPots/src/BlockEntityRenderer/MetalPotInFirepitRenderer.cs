@@ -1,5 +1,5 @@
 ﻿using MetalPots.Blocks;
-using MetalPots.src.System.cooking;
+using MetalPots.Systems;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,35 +18,37 @@ namespace MetalPots.BlockEntityRenderer
         public int RenderRange => 20;
 
         ICoreClientAPI capi;
+        ItemStack stack;
+        BlockPos pos;
+        bool isInOutputSlot;
+
         MultiTextureMeshRef potWithFoodRef;
         MultiTextureMeshRef potRef;
         MultiTextureMeshRef lidRef;
-        BlockPos pos;
         float temp;
 
         ILoadedSound cookingSound;
-
-        bool isInOutputSlot;
         Matrixf ModelMat = new Matrixf();
 
         public MetalPotInFirepitRenderer(ICoreClientAPI capi, ItemStack stack, BlockPos pos, bool isInOutputSlot)
         {
             this.capi = capi;
+            this.stack = stack;
             this.pos = pos;
             this.isInOutputSlot = isInOutputSlot;
 
-
             MPBlockCookedContainer potBlock = capi.World.GetBlock(stack.Collectible.CodeWithVariant("type", "cooked")) as MPBlockCookedContainer;
+            if (potBlock == null) return;
 
             if (isInOutputSlot)
             {
                 MPMealMeshCache meshcache = capi.ModLoader.GetModSystem<MPMealMeshCache>();
-
-                potWithFoodRef = meshcache.GetOrCreateMealInContainerMeshRef(potBlock, potBlock.GetCookingRecipe(capi.World, stack), potBlock.GetNonEmptyContents(capi.World, stack), new Vec3f(0, 6.0f / 16f, 0));
+                potWithFoodRef = meshcache.GetOrCreateMealInContainerMeshRef(potBlock, potBlock.GetCookingRecipe(capi.World, stack), potBlock.GetNonEmptyContents(capi.World, stack), new Vec3f(0, 6.0f / 16f, 0), stack);
             }
             else
             {
-                string basePath = potBlock.Code.PathStartsWith("dirtymetalpot") ? "metalpots:shapes/block/metal/dirty-metalpot-" : "metalpots:shapes/block/metal/metalpot-";
+                // Fixed: PathStartsWith replaced with Path.StartsWith
+                string basePath = potBlock.Code.Path.StartsWith("dirtymetalpot") ? "metalpots:shapes/block/metal/dirty-metalpot-" : "metalpots:shapes/block/metal/metalpot-";
                 MeshData potMesh;
                 capi.Tesselator.TesselateShape(potBlock, Shape.TryGet(capi, basePath + "opened-empty-withtrivet.json"), out potMesh);
                 potRef = capi.Render.UploadMultiTextureMesh(potMesh);
@@ -61,6 +63,7 @@ namespace MetalPots.BlockEntityRenderer
         {
             potRef?.Dispose();
             lidRef?.Dispose();
+            // Note: potWithFoodRef belongs to a central cache managed by MPMealMeshCache and shouldn't be disposed here.
 
             cookingSound?.Stop();
             cookingSound?.Dispose();
@@ -88,7 +91,6 @@ namespace MetalPots.BlockEntityRenderer
             prog.SsaoAttn = 0;
             prog.AlphaTest = 0.05f;
             prog.OverlayOpacity = 0;
-
 
             prog.ModelMatrix = ModelMat
                 .Identity()
@@ -122,7 +124,6 @@ namespace MetalPots.BlockEntityRenderer
                 prog.ViewMatrix = rpi.CameraMatrixOriginf;
                 prog.ProjectionMatrix = rpi.CurrentProjectionMatrix;
 
-
                 rpi.RenderMultiTextureMesh(lidRef, "tex");
             }
 
@@ -139,15 +140,28 @@ namespace MetalPots.BlockEntityRenderer
 
         public void OnCookingComplete()
         {
-            isInOutputSlot = true;
-        }
+            if (!isInOutputSlot)
+            {
+                isInOutputSlot = true;
 
+                MPBlockCookedContainer potBlock = capi.World.GetBlock(stack.Collectible.CodeWithVariant("type", "cooked")) as MPBlockCookedContainer;
+                if (potBlock != null)
+                {
+                    MPMealMeshCache meshcache = capi.ModLoader.GetModSystem<MPMealMeshCache>();
+                    potWithFoodRef = meshcache.GetOrCreateMealInContainerMeshRef(potBlock, potBlock.GetCookingRecipe(capi.World, stack), potBlock.GetNonEmptyContents(capi.World, stack), new Vec3f(0, 6.0f / 16f, 0), stack);
+                }
+
+                potRef?.Dispose();
+                potRef = null;
+                lidRef?.Dispose();
+                lidRef = null;
+            }
+        }
 
         public void SetCookingSoundVolume(float volume)
         {
             if (volume > 0)
             {
-
                 if (cookingSound == null)
                 {
                     cookingSound = capi.World.LoadSound(new SoundParams()
@@ -166,7 +180,6 @@ namespace MetalPots.BlockEntityRenderer
                 {
                     cookingSound.SetVolume(volume);
                 }
-
             }
             else
             {

@@ -1,0 +1,42 @@
+[
+    {
+        "file": "metalpots:recipes/barrel/soapandlyecontinued.json",
+        "op": "replace",
+        "path": "/0/enabled",
+        "side": "server",
+        "value": true,
+        "dependsOn": [ { "modid": "soapandlyecontinued" } ]
+    },
+    {
+        "file": "metalpots:recipes/barrel/soapandlyecontinued.json",
+        "op": "replace",
+        "path": "/1/enabled",
+        "side": "server",
+        "value": true,
+        "dependsOn": [ { "modid": "soapandlyecontinued" } ]
+    },
+    {
+        "file": "metalpots:recipes/barrel/soapandlyecontinued.json",
+        "op": "replace",
+        "path": "/2/enabled",
+        "side": "server",
+        "value": true,
+        "dependsOn": [ { "modid": "soapandlyecontinued" } ]
+    },
+    {
+        "file": "metalpots:recipes/barrel/soapandlyecontinued.json",
+        "op": "replace",
+        "path": "/3/enabled",
+        "side": "server",
+        "value": true,
+        "dependsOn": [ { "modid": "soapandlyecontinued" } ]
+    },
+    {
+        "file": "metalpots:recipes/barrel/soapandlyecontinued.json",
+        "op": "replace",
+        "path": "/4/enabled",
+        "side": "server",
+        "value": true,
+        "dependsOn": [ { "modid": "soapandlyecontinued" } ]
+    }
+]
